@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\controllers">
+      <UniqueIdentifier>{aa437207-a8b2-4fc3-9bb6-dbad944d1cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{3e5d5600-6240-4df5-9779-068a8d1669e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{545cbecd-da28-4451-8b01-3417254bba3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI_utils">
+      <UniqueIdentifier>{9ffcdaf7-9964-4b60-b7e3-408811474b15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppControler.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearScreen.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawMap.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseControl.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="UIButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="UiControler.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppControler.h">
+      <Filter>Source Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearScreen.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawMap.h">
+      <Filter>Source Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseControl.h">
+      <Filter>Source Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="UIButton.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveButton.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearButton.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadButton.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="UIControler.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Enumarators.h">
+      <Filter>Source Files\engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
