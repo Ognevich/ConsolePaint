@@ -1,3 +1,7 @@
-﻿  UiControler.cpp
-D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(40,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  AppControler.cpp
+  UiControler.cpp
+D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(39,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(55,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   ConsolePaint.vcxproj -> D:\my_projects\c++\ConsolePaint\x64\Debug\ConsolePaint.exe

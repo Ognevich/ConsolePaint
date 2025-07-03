@@ -5,15 +5,18 @@
 #include "LoadButton.h"
 #include <vector>
 #include "iostream"
+#include "Windows.h"
 
+#define PANEL_Y_OFFSET 20 
 
 class UiControler {
 public:
 
-	UiControler(int xOffset);
+	UiControler();
 	~UiControler();
 
 	void drawUI();
+	void drawUI(int mouseX, int mouseY);
 	void clickDetection(int mouseX, int mouseY);
 	void setAction(OnClickActions new_action);
 	OnClickActions getActiveAction();
@@ -21,7 +24,6 @@ public:
 
 private:
 	std::vector<UIButton*> buttons;
-	int panelXoffset;
 	OnClickActions activeAction = OnClickActions::NONE;
 };
 

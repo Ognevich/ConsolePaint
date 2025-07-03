@@ -7,22 +7,29 @@ AppControler::AppControler(int height, int width) : map(height, width)
 void AppControler::Run()
 {
 	map.drawScreen();
-	UiControler panel(21);
+	UiControler panel;
+	ClearScreen clr;
+
 	panel.drawUI();
+
 	while (true) {
-		if (mouse.pollMouseEvent() && mouse.isLeftClick()) {
+		if (mouse.pollMouseEvent()) {
 			COORD pos = mouse.getMousePosition();
 
-			panel.clickDetection(pos.X, pos.Y);
-			callTask(panel.getActiveAction(), panel);
-	
+			if (mouse.isLeftClick()) {
+				panel.clickDetection(pos.X, pos.Y);
+				callTask(panel.getActiveAction(), panel);
+				map.drawScreen();
+				map.addPixel(pos.Y, pos.X);
+				panel.drawUI();
+			}
+			else if (mouse.isMouseMoved()) {
 
-			map.addPixel(pos.Y, pos.X);
-			map.drawScreen();
-
-			panel.drawUI();
-
+				panel.drawUI(pos.X, pos.Y);
+			}
+			
 		}
+
 	}
 }
 
