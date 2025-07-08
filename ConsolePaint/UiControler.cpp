@@ -38,7 +38,7 @@ void UiControler::drawUI(int mouseX, int mouseY) {
 		int start = btn->getX();
 		int end = start + btn->getLabel().size() + 1;
 
-		if (mouseY >= PANEL_Y_OFFSET && mouseX >= start && mouseX <= end)
+		if (mouseY == PANEL_Y_OFFSET + 1 && mouseX >= start && mouseX <= end)
 			std::cout << "[##" << btn->getLabel() << "##]  ";
 		else
 			std::cout << "[" << btn->getLabel() << "]  ";

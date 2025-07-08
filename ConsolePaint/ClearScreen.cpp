@@ -10,18 +10,15 @@ void ClearScreen::clearScreenMethod() const {
     COORD homeCoords = { 0, 0 };
 
     if (hConsole == INVALID_HANDLE_VALUE) return;
-
     if (!GetConsoleScreenBufferInfo(hConsole, &csbi)) return;
 
-    int width = csbi.dwSize.X;
-    int height = csbi.dwSize.Y / 2;
+    int consoleSize = csbi.dwSize.X * csbi.dwSize.Y; 
 
-    if (!FillConsoleOutputCharacter(hConsole, (TCHAR)' ', width * height, homeCoords, &count)) return;
-    if (!FillConsoleOutputAttribute(hConsole, csbi.wAttributes, width * height, homeCoords, &count)) return;
+    if (!FillConsoleOutputCharacter(hConsole, (TCHAR)' ', consoleSize, homeCoords, &count)) return;
+    if (!FillConsoleOutputAttribute(hConsole, csbi.wAttributes, consoleSize, homeCoords, &count)) return;
 
     SetConsoleCursorPosition(hConsole, homeCoords);
 }
-
 void ClearScreen::clearGameScreen() const {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 

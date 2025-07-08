@@ -4,6 +4,7 @@
 #include "DrawMap.h"
 #include "UIControler.h"
 
+
 class AppControler {
 
 public:
@@ -11,13 +12,14 @@ public:
 	AppControler(int height, int width);
 
 
-	void callTask(OnClickActions activeAction, UiControler& panel);
+	//void callTask(OnClickActions activeAction, UiControler& panel);
 	void Run();
 
 private:
 
 	Map map;
 	MouseHandler mouse;
+
 
 };
 

@@ -2,7 +2,8 @@
 #define SAVE_BUTTON_H
 #include "UIButton.h"
 #include "iostream"
-
+#include "FileControler.h"
+#include "Defines.h"
 class SaveButton : public UIButton {
 
 public:

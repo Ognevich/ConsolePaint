@@ -6,8 +6,7 @@
 #include <vector>
 #include "iostream"
 #include "Windows.h"
-
-#define PANEL_Y_OFFSET 20 
+#include "Defines.h"
 
 class UiControler {
 public:

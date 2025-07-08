@@ -1,7 +1,14 @@
 ﻿  AppControler.cpp
+  ClearButton.cpp
+  LoadButton.cpp
+  SaveButton.cpp
+  UIButton.cpp
+D:\my_projects\c++\ConsolePaint\ConsolePaint\UIButton.cpp(4,61): error C2512: 'Map': no appropriate default constructor available
+      D:\my_projects\c++\ConsolePaint\ConsolePaint\DrawMap.h(7,7):
+      see declaration of 'Map'
+  
   UiControler.cpp
 D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(39,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(55,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
   Generating Code...
-  ConsolePaint.vcxproj -> D:\my_projects\c++\ConsolePaint\x64\Debug\ConsolePaint.exe

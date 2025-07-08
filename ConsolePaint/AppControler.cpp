@@ -18,9 +18,9 @@ void AppControler::Run()
 
 			if (mouse.isLeftClick()) {
 				panel.clickDetection(pos.X, pos.Y);
-				callTask(panel.getActiveAction(), panel);
-				map.drawScreen();
 				map.addPixel(pos.Y, pos.X);
+				map.drawScreen();
+				//callTask(panel.getActiveAction(), panel);
 				panel.drawUI();
 			}
 			else if (mouse.isMouseMoved()) {
@@ -34,25 +34,43 @@ void AppControler::Run()
 }
 
 
-void AppControler::callTask(OnClickActions activeAction, UiControler& panel)
-{
-	switch (activeAction)
-	{
-	case OnClickActions::NONE:
-		break;
-	case OnClickActions::SAVE:
-		std::cout << "Save";
-		panel.setAction(OnClickActions::NONE);
-		break;
-	case OnClickActions::LOAD:
-		std::cout << "Load";
-		panel.setAction(OnClickActions::NONE);
-		break;
-	case OnClickActions::CLEAR:
-		map.createScreen();
-		panel.setAction(OnClickActions::NONE);
-		break;
-	default:
-		break;
-	}
-}
+//void AppControler::callTask(OnClickActions activeAction, UiControler& panel)
+//{
+//    DBG("callTask called with activeAction = " << static_cast<int>(activeAction));
+//
+//    switch (activeAction)
+//    {
+//    case OnClickActions::NONE:
+//        DBG("Action: NONE — нічого не робимо\n\n");
+//        break;
+//
+//    case OnClickActions::SAVE:
+//    {
+//        std::string currentPath = fileControl.getFilePath();
+//
+//        if (currentPath.empty()) {
+//            DBG("Помилка: file_path порожній, файл не буде збережено!");
+//        }
+//        else {
+//            fileControl.createFile();
+//        }
+//        panel.setAction(OnClickActions::NONE);
+//        break;
+//    }
+//
+//    case OnClickActions::LOAD:
+//        DBG("Action: LOAD");
+//        panel.setAction(OnClickActions::NONE);
+//        break;
+//
+//    case OnClickActions::CLEAR:
+//        DBG("Action: CLEAR — очищуємо мапу");
+//        map.createScreen();
+//        panel.setAction(OnClickActions::NONE);
+//        break;
+//
+//    default:
+//        DBG("Action: НЕВІДОМИЙ (" << static_cast<int>(activeAction) << ")");
+//        break;
+//    }
+//}

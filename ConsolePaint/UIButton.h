@@ -3,6 +3,9 @@
 #include <string>
 #include "Enumarators.h"
 #include <iostream>
+#include "FileControler.h"
+#include "Defines.h"
+
 class UIButton {
 
 public:
