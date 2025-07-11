@@ -10,16 +10,14 @@ class AppControler {
 public:
 
 	AppControler(int height, int width);
-
-
-	//void callTask(OnClickActions activeAction, UiControler& panel);
+	void callTask(UiControler& panel);
 	void Run();
 
 private:
 
+	FileControler fileControler;
 	Map map;
 	MouseHandler mouse;
-
 
 };
 

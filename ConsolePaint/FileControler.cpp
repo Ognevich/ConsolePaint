@@ -56,7 +56,7 @@ std::string FileControler::createNewFileName(const std::string& filepath)
     return newFileName;
 }
 
-void FileControler::createFile()
+void FileControler::createFile(std::string fileData)
 {
 
     if (file_path.empty()) {
@@ -73,12 +73,40 @@ void FileControler::createFile()
         return;
     }
 
-    file << "File is saved";
+    file << fileData;
     file.close();
 }
 
-std::string FileControler::getFilePath() {
+std::string FileControler::promptFilenameInput()
+{
 
+    std::string filename;
+    std::cout << "Enter filename: ";
+    std::cin >> filename;
+
+    std::string filepath = "D:\\my_projects\\c++\\ConsolePaint\\ConsolePaint\\savedScatches\\" + filename;
+    std::string fileData = getFileData(filepath);
+
+    return fileData;
+}
+
+std::string FileControler::getFileData(std::string& filepath)
+{
+    std::ifstream file(filepath);
+    if (!file.is_open()) {
+        std::cerr << "Error: Cannot open file: " << filepath << '\n';
+        return {};
+    }
+
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+
+    std::string fileData = buffer.str();
+
+    return fileData;
+}
+
+std::string FileControler::getFilePath() {
     return file_path;
 }
 

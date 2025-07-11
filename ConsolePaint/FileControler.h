@@ -4,6 +4,7 @@
 #include <filesystem>
 #include <vector>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 #include "Defines.h"
 
@@ -16,9 +17,13 @@ public:
 	int filesFoundMax(const std::string& filepath);
 	bool isTargetFile(const std::string& filename);
 	std::string createNewFileName(const std::string& filepath);
-	void createFile();
+	void createFile(std::string fileData);
+
+	std::string promptFilenameInput();
+	std::string getFileData(std::string & filepath);
 
 	std::string getFilePath();
+
 
 private:
 

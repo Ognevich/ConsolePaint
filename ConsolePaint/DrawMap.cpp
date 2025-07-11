@@ -47,6 +47,43 @@ void Map::addPixel(const int y, const int x)
     }
 }
 
+std::string Map::getVectorToStringScreen()
+{
+    std::string currentMap;
+
+    for (int i = 0; i < screen.size(); i++) {
+        for (char j : screen[i]) {
+            currentMap += j;
+        }
+        currentMap += "\n";
+    }
+
+    return currentMap;
+}
+
+void Map::setStringToVectorScreen(std::string loadScreen)
+{
+    std::vector<std::vector<char>> screen;
+    std::vector<char> currentRow;
+
+    for (char ch : loadScreen) {
+        if (ch == '\n') {
+            screen.push_back(currentRow);
+            currentRow.clear();
+        }
+        else {
+            currentRow.push_back(ch);
+        }
+    }
+
+    if (!currentRow.empty()) {
+        screen.push_back(currentRow);
+    }
+
+    this->screen = screen;
+}
+
+
 
 
 

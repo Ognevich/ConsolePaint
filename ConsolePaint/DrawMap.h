@@ -16,6 +16,9 @@ public:
 	void drawScreen();
 	void addPixel(const int height, const int width);
 
+	std::string getVectorToStringScreen();
+	void setStringToVectorScreen(std::string loadScreen);
+
 
 private:
 

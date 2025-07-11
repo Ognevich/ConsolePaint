@@ -1,14 +1,51 @@
 #include "AppControler.h"
 
-AppControler::AppControler(int height, int width) : map(height, width)
+AppControler::AppControler(int height, int width) : map(height, width), fileControler(FILE_PATH)
 {
+}
+
+void AppControler::callTask(UiControler& panel)
+{
+	OnClickActions current_action;
+
+	current_action = panel.getActiveAction();
+
+	switch (current_action)
+	{
+	case OnClickActions::NONE:
+		break;
+	case OnClickActions::SAVE:
+	{
+		fileControler.createFile(map.getVectorToStringScreen());
+		panel.setAction(OnClickActions::NONE);
+		break;
+	}
+	case OnClickActions::LOAD:
+	{
+		std::string fileData = fileControler.promptFilenameInput();
+		map.setStringToVectorScreen(fileData);
+
+
+		panel.setAction(OnClickActions::NONE);
+		break;
+	}
+	case OnClickActions::CLEAR:
+	{
+		map.createScreen();
+		panel.setAction(OnClickActions::NONE);
+		break;
+	}
+	default:
+		break;
+	}
+
 }
 
 void AppControler::Run()
 {
 	map.drawScreen();
-	UiControler panel;
 	ClearScreen clr;
+	UiControler panel;
 
 	panel.drawUI();
 
@@ -18,13 +55,13 @@ void AppControler::Run()
 
 			if (mouse.isLeftClick()) {
 				panel.clickDetection(pos.X, pos.Y);
+				callTask(panel);
 				map.addPixel(pos.Y, pos.X);
 				map.drawScreen();
-				//callTask(panel.getActiveAction(), panel);
 				panel.drawUI();
+
 			}
 			else if (mouse.isMouseMoved()) {
-
 				panel.drawUI(pos.X, pos.Y);
 			}
 			
@@ -32,45 +69,3 @@ void AppControler::Run()
 
 	}
 }
-
-
-//void AppControler::callTask(OnClickActions activeAction, UiControler& panel)
-//{
-//    DBG("callTask called with activeAction = " << static_cast<int>(activeAction));
-//
-//    switch (activeAction)
-//    {
-//    case OnClickActions::NONE:
-//        DBG("Action: NONE — нічого не робимо\n\n");
-//        break;
-//
-//    case OnClickActions::SAVE:
-//    {
-//        std::string currentPath = fileControl.getFilePath();
-//
-//        if (currentPath.empty()) {
-//            DBG("Помилка: file_path порожній, файл не буде збережено!");
-//        }
-//        else {
-//            fileControl.createFile();
-//        }
-//        panel.setAction(OnClickActions::NONE);
-//        break;
-//    }
-//
-//    case OnClickActions::LOAD:
-//        DBG("Action: LOAD");
-//        panel.setAction(OnClickActions::NONE);
-//        break;
-//
-//    case OnClickActions::CLEAR:
-//        DBG("Action: CLEAR — очищуємо мапу");
-//        map.createScreen();
-//        panel.setAction(OnClickActions::NONE);
-//        break;
-//
-//    default:
-//        DBG("Action: НЕВІДОМИЙ (" << static_cast<int>(activeAction) << ")");
-//        break;
-//    }
-//}
