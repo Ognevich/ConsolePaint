@@ -14,9 +14,9 @@ public:
 	FileControler(const std::string& initialPath);
 
 	int getFileIndex(const std::string& filename);
-	int filesFoundMax(const std::string& filepath);
+	bool checkUniqueFileName(const std::string& filepath, std::string filename);
 	bool isTargetFile(const std::string& filename);
-	std::string createNewFileName(const std::string& filepath);
+	std::string createNewFileName(const std::string& filepath, std::string filename);
 	void createFile(std::string fileData);
 
 	std::string promptFilenameInput();
