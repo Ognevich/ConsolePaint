@@ -40,7 +40,7 @@ std::string FileControler::promptFilenameInput()
     std::cout << "Enter filename: ";
     std::cin >> filename;
 
-    std::string filepath = "D:\\my_projects\\c++\\ConsolePaint\\ConsolePaint\\savedScatches\\" + filename;
+    std::string filepath = "D:\\my_projects\\c++\\ConsolePaint\\ConsolePaint\\savedScatches\\" + filename + ".txt";
     std::string fileData = getFileData(filepath);
 
     return fileData;

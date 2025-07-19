@@ -67,6 +67,9 @@ void Map::setStringToVectorScreen(std::string loadScreen)
     std::vector<char> currentRow;
 
     for (char ch : loadScreen) {
+        if (ch == '\0')
+            ch = ' ';
+        
         if (ch == '\n') {
             screen.push_back(currentRow);
             currentRow.clear();

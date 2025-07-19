@@ -6,6 +6,7 @@ public:
     ClearScreen();
     void clearScreenMethod() const;
     void clearGameScreen() const;
+    void clearBelowLine(int lineY) const;
 };
 
 #endif

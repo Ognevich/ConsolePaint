@@ -22,19 +22,21 @@ void UiControler::drawUI(int mouseX, int mouseY) {
     COORD uiPos = { 0, PANEL_Y_OFFSET };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), uiPos);
 
+    std::cout << std::string(150, ' ');
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), uiPos); 
+
     std::cout << "\n";
     for (const auto& btn : buttons) {
         int start = btn->getX();
         int end = start + btn->getLabel().size() + 1;
 
         if (mouseY == PANEL_Y_OFFSET + 1 && mouseX >= start && mouseX <= end)
-            std::cout << "[##" << btn->getLabel() << "##]  ";
+            std::cout << "[##" << btn->getLabel() << "##]";
         else
             std::cout << "[" << btn->getLabel() << "]  ";
     }
     std::cout << "\n";
 }
-
 void UiControler::clickDetection(int mouseX, int mouseY) {
     if (mouseY != PANEL_Y_OFFSET + 1) return;
 

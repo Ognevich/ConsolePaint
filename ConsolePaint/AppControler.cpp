@@ -23,6 +23,10 @@ void AppControler::callTask(UiControler& panel)
 	case OnClickActions::LOAD:
 	{
 		std::string fileData = fileControler.promptFilenameInput();
+		if (fileData.empty()) {
+			panel.setAction(OnClickActions::NONE);
+			return;
+		}
 		map.setStringToVectorScreen(fileData);
 
 
