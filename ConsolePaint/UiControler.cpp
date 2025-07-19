@@ -19,11 +19,12 @@ void UiControler::drawUI() {
 }
 
 void UiControler::drawUI(int mouseX, int mouseY) {
-    COORD uiPos = { 0, PANEL_Y_OFFSET };
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), uiPos);
 
-    std::cout << std::string(150, ' ');
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), uiPos); 
+    COORD uiPos = { 0, PANEL_Y_OFFSET };
+    clearScreen.setCursorPos(uiPos);
+
+    clearScreen.setStringLine();
+    clearScreen.setCursorPos(uiPos);
 
     std::cout << "\n";
     for (const auto& btn : buttons) {
@@ -37,6 +38,7 @@ void UiControler::drawUI(int mouseX, int mouseY) {
     }
     std::cout << "\n";
 }
+
 void UiControler::clickDetection(int mouseX, int mouseY) {
     if (mouseY != PANEL_Y_OFFSET + 1) return;
 

@@ -12,6 +12,8 @@
 #include <Windows.h>
 #include "Defines.h"
 #include "Enumarators.h"
+#include "ClearScreen.h"
+
 
 class UiControler {
 public:
@@ -30,6 +32,7 @@ public:
 private:
     std::vector<std::unique_ptr<UIButton>> buttons;
     OnClickActions activeAction = OnClickActions::NONE;
+    ClearScreen clearScreen;
 };
 
 #endif

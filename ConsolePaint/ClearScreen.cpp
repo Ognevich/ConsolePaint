@@ -1,5 +1,4 @@
 #include "ClearScreen.h"
-#include <Windows.h>
 
 ClearScreen::ClearScreen() {}
 
@@ -33,3 +32,21 @@ void ClearScreen::clearGameScreen() const {
     cursorPosition.Y = 0;
     SetConsoleCursorPosition(hConsole, cursorPosition);
 }
+
+void ClearScreen::setCursorPos(COORD uiPos)
+{
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), uiPos);
+}
+
+void ClearScreen::setStringLine()
+{
+    std::cout << std::string(150, ' ');
+}
+
+void ClearScreen::clearButtonInfo()
+{
+    COORD uipos = { 0, PANEL_Y_OFFSET + 2 };
+    setStringLine();
+    setCursorPos(uipos);
+}
+

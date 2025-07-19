@@ -54,6 +54,10 @@ void AppControler::Run()
 	panel.drawUI();
 
 	while (true) {
+
+		// CLEAR INFO BELOW UI
+		clr.clearButtonInfo();
+
 		if (mouse.pollMouseEvent()) {
 			COORD pos = mouse.getMousePosition();
 
