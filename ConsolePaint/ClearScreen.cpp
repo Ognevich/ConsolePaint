@@ -40,12 +40,12 @@ void ClearScreen::setCursorPos(COORD uiPos)
 
 void ClearScreen::setStringLine()
 {
-    std::cout << std::string(150, ' ');
+    std::cout << std::string(STRING_REPALCE, ' ');
 }
 
 void ClearScreen::clearButtonInfo()
 {
-    COORD uipos = { 0, PANEL_Y_OFFSET + 2 };
+    COORD uipos = { 0, LOGPANEL_Y_OFFSET };
     setStringLine();
     setCursorPos(uipos);
 }

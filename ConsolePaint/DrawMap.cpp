@@ -2,6 +2,7 @@
 
 
 Map::Map(int h, int w) : height(h), width(w), screen(height, std::vector<char>(width, ' ')) {
+    drawTypeAction = DrawTypeAction::CIRCLE;
     createScreen();
 }
 
@@ -40,10 +41,13 @@ void Map::drawScreen() {
     }
 }
 
+
 void Map::addPixel(const int y, const int x)
 {
     if (y > 0 && y < height - 1 && x > 0 && x < width - 1) {
-        screen[y][x] = 'o';
+        
+        char symbol = ChooseDrawTypeSymbol();
+        screen[y][x] = symbol;
     }
 }
 
@@ -84,6 +88,26 @@ void Map::setStringToVectorScreen(std::string loadScreen)
     }
 
     this->screen = screen;
+}
+
+void Map::setDrawType(DrawTypeAction drawTypeAction)
+{
+    this->drawTypeAction = drawTypeAction;
+}
+
+char Map::ChooseDrawTypeSymbol()
+{
+    switch (drawTypeAction)
+    {
+    case DrawTypeAction::CIRCLE:
+        return 'o';
+    case DrawTypeAction::ASTERICS:
+        return '*';
+    case DrawTypeAction::ERASER:
+        return ' ';
+    default:
+        break;
+    }
 }
 
 

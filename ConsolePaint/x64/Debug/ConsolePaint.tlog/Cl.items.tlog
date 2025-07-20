@@ -1,7 +1,10 @@
 D:\my_projects\c++\ConsolePaint\ConsolePaint\AppControler.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\AppControler.obj
+D:\my_projects\c++\ConsolePaint\ConsolePaint\AstericsButton.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\AstericsButton.obj
+D:\my_projects\c++\ConsolePaint\ConsolePaint\CircleButton.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\CircleButton.obj
 D:\my_projects\c++\ConsolePaint\ConsolePaint\ClearButton.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\ClearButton.obj
 D:\my_projects\c++\ConsolePaint\ConsolePaint\ClearScreen.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\ClearScreen.obj
 D:\my_projects\c++\ConsolePaint\ConsolePaint\DrawMap.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\DrawMap.obj
+D:\my_projects\c++\ConsolePaint\ConsolePaint\EraseButton.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\EraseButton.obj
 D:\my_projects\c++\ConsolePaint\ConsolePaint\FileControler.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\FileControler.obj
 D:\my_projects\c++\ConsolePaint\ConsolePaint\LoadButton.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\LoadButton.obj
 D:\my_projects\c++\ConsolePaint\ConsolePaint\main.cpp;D:\my_projects\c++\ConsolePaint\ConsolePaint\x64\Debug\main.obj

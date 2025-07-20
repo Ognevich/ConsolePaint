@@ -3,6 +3,7 @@
 #include <iostream>
 #include "ClearScreen.h"
 #include <vector>
+#include "Enumarators.h"
 
 class Map {
 
@@ -19,6 +20,11 @@ public:
 	std::string getVectorToStringScreen();
 	void setStringToVectorScreen(std::string loadScreen);
 
+	void setDrawType(DrawTypeAction drawTypeAction);
+	
+	char ChooseDrawTypeSymbol();
+	
+
 
 private:
 
@@ -28,6 +34,7 @@ private:
 	std::vector<std::vector<char>> screen;
 
 	ClearScreen clearScreen;
+	DrawTypeAction drawTypeAction;
 };
 
 

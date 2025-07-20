@@ -4,6 +4,9 @@ UiControler::UiControler() {
     buttons.push_back(std::make_unique<SaveButton>(0));
     buttons.push_back(std::make_unique<LoadButton>(8));
     buttons.push_back(std::make_unique<ClearButton>(16));
+    buttons.push_back(std::make_unique<CircleButton>(24));
+    buttons.push_back(std::make_unique<AstericsButton>(32));
+    buttons.push_back(std::make_unique<EraseButton>(40));
 }
 
 OnClickActions UiControler::getActiveAction() {

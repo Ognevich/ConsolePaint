@@ -129,9 +129,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppControler.cpp" />
+    <ClCompile Include="AstericsButton.cpp" />
+    <ClCompile Include="CircleButton.cpp" />
     <ClCompile Include="ClearButton.cpp" />
     <ClCompile Include="ClearScreen.cpp" />
     <ClCompile Include="DrawMap.cpp" />
+    <ClCompile Include="EraseButton.cpp" />
     <ClCompile Include="FileControler.cpp" />
     <ClCompile Include="LoadButton.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,11 +145,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppControler.h" />
+    <ClInclude Include="AstericsButton.h" />
+    <ClInclude Include="CircleButton.h" />
     <ClInclude Include="ClearButton.h" />
     <ClInclude Include="ClearScreen.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DrawMap.h" />
     <ClInclude Include="Enumarators.h" />
+    <ClInclude Include="EraseButton.h" />
     <ClInclude Include="FileControler.h" />
     <ClInclude Include="LoadButton.h" />
     <ClInclude Include="MouseControl.h" />

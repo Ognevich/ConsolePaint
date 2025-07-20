@@ -1,9 +1,6 @@
 ﻿  AppControler.cpp
-  ClearScreen.cpp
   DrawMap.cpp
-  UiControler.cpp
-D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(32,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\my_projects\c++\ConsolePaint\ConsolePaint\UiControler.cpp(47,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
   Generating Code...
+D:\my_projects\c++\ConsolePaint\ConsolePaint\DrawMap.cpp(111,1): warning C4715: 'Map::ChooseDrawTypeSymbol': not all control paths return a value
   ConsolePaint.vcxproj -> D:\my_projects\c++\ConsolePaint\x64\Debug\ConsolePaint.exe

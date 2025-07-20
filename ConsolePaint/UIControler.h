@@ -5,6 +5,10 @@
 #include "ClearButton.h"
 #include "SaveButton.h"
 #include "LoadButton.h"
+#include "CircleButton.h"
+#include "AstericsButton.h"
+#include "EraseButton.h"
+
 
 #include <vector>
 #include <memory>

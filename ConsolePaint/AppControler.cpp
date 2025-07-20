@@ -6,9 +6,8 @@ AppControler::AppControler(int height, int width) : map(height, width), fileCont
 
 void AppControler::callTask(UiControler& panel)
 {
-	OnClickActions current_action;
 
-	current_action = panel.getActiveAction();
+	OnClickActions current_action = panel.getActiveAction();
 
 	switch (current_action)
 	{
@@ -37,6 +36,21 @@ void AppControler::callTask(UiControler& panel)
 	{
 		map.createScreen();
 		panel.setAction(OnClickActions::NONE);
+		break;
+	}
+	case OnClickActions::CIRCLE_B:
+	{
+		map.setDrawType(DrawTypeAction::CIRCLE);
+		break;
+	}
+	case OnClickActions::ASTERICS_B:
+	{
+		map.setDrawType(DrawTypeAction::ASTERICS);
+		break;
+	}
+	case OnClickActions::ERASER_B:
+	{
+		map.setDrawType(DrawTypeAction::ERASER);
 		break;
 	}
 	default:

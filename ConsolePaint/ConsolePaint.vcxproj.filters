@@ -60,6 +60,15 @@
     <ClCompile Include="FileControler.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
+    <ClCompile Include="CircleButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="AstericsButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="EraseButton.cpp">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppControler.h">
@@ -97,6 +106,15 @@
     </ClInclude>
     <ClInclude Include="Defines.h">
       <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleButton.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="AstericsButton.h">
+      <Filter>Source Files\UI_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="EraseButton.h">
+      <Filter>Source Files\UI_utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
