@@ -53,6 +53,11 @@ void AppControler::callTask(UiControler& panel)
 		map.setDrawType(DrawTypeAction::ERASER);
 		break;
 	}
+	case OnClickActions::DOUBLE_ERASER_B:
+	{
+		map.setDrawType(DrawTypeAction::DOUBLE_ERASER);
+		break;
+	}
 	default:
 		break;
 	}

@@ -45,6 +45,7 @@ void ClearScreen::setStringLine()
 
 void ClearScreen::clearButtonInfo()
 {
+    std::cout << std::string("\t");
     COORD uipos = { 0, LOGPANEL_Y_OFFSET };
     setStringLine();
     setCursorPos(uipos);

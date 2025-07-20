@@ -2,13 +2,14 @@
 #define UI_CONTROLER_H
 
 #include "UIButton.h"
+
 #include "ClearButton.h"
 #include "SaveButton.h"
 #include "LoadButton.h"
 #include "CircleButton.h"
 #include "AstericsButton.h"
 #include "EraseButton.h"
-
+#include "DoubleEraseButton.h"
 
 #include <vector>
 #include <memory>

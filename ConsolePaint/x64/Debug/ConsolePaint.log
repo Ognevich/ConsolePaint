@@ -1,6 +1,2 @@
-﻿  AppControler.cpp
-  DrawMap.cpp
-  main.cpp
-  Generating Code...
-D:\my_projects\c++\ConsolePaint\ConsolePaint\DrawMap.cpp(111,1): warning C4715: 'Map::ChooseDrawTypeSymbol': not all control paths return a value
+﻿  ClearScreen.cpp
   ConsolePaint.vcxproj -> D:\my_projects\c++\ConsolePaint\x64\Debug\ConsolePaint.exe

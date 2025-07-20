@@ -47,7 +47,17 @@ void Map::addPixel(const int y, const int x)
     if (y > 0 && y < height - 1 && x > 0 && x < width - 1) {
         
         char symbol = ChooseDrawTypeSymbol();
-        screen[y][x] = symbol;
+        
+        if (symbol != 'N')
+            screen[y][x] = symbol;
+        else {
+            for (int dy = -1; dy <= 1; ++dy) {
+                for (int dx = -1; dx <= 1; ++dx) {
+                    screen[y + dy][x + dx] = ' ';
+                }
+            }
+        }
+    
     }
 }
 
@@ -105,6 +115,8 @@ char Map::ChooseDrawTypeSymbol()
         return '*';
     case DrawTypeAction::ERASER:
         return ' ';
+    case DrawTypeAction::DOUBLE_ERASER:
+        return 'N';
     default:
         break;
     }

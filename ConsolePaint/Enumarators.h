@@ -8,13 +8,15 @@ enum class OnClickActions {
 	CIRCLE_B,
 	ASTERICS_B,
 	ERASER_B,
+	DOUBLE_ERASER_B,
 	CLEAR
 };
 
 enum class DrawTypeAction {
 	CIRCLE,
 	ASTERICS,
-	ERASER
+	ERASER,
+	DOUBLE_ERASER
 };
 
 #endif
